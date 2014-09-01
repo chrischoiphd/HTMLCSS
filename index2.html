@@ -142,6 +142,15 @@ for (var j = 1; j < 10; j++) {
 		console.log(j," * ", i, " = ", i*j);
 	}
 }
+
+console.log("=== 피보나치 수열 ===")
+var sum = 2;
+for (var i = 1; i < 10; i++) {
+	var pre_sum = sum;
+
+	sum = pre_sum + i;
+	console.log(i," + ", pre_sum, " = ", sum);
+}
 //-->
 </script>	
 </html>
