@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>Homework 05</title>
+	</head>
+<script type="text/javascript">
+<!--
+// Code 1 : 그림 패턴 출력
+console.log("Code 1 : 그림 패턴 출력");
+
+var string1 = "     *";
+var string2 = "*     ";
+
+for (var i = 0; i < 6; i++) {
+	console.log(string1 +  string2);
+	string1 = string1.substr(1) + string1.substr(0,1);
+	string2 = string2.substr(5) + string2.substr(0,5);
+}
+
+// Code 2 : 배열에 1~100 사이의 값을 랜덤하게 10개 채워 넣고, 각 배열 원소의 합과 평균을 구해서 출력
+console.log("Code 2 : 배열에 1~100 사이의 값을 랜덤하게 10개 채워 넣고, 각 배열 원소의 합과 평균을 구해서 출력");
+
+var arr = new Array();
+
+for (var i = 0; i < 10; i++) {
+	arr[i] = Math.round(Math.random() * 100);
+}
+
+console.log("random array : " + arr.toString());
+
+var sum = 0;
+var avg = 0;
+
+
+for (var i = 0; i < 10; i++) {
+	sum += arr[i];
+}
+
+avg = sum / 10.0;
+
+console.log("Summary : " + sum);
+console.log("Average : " + avg);
+
+//-->
+</script>	
+</html>
