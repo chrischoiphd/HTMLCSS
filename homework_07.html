@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>Homework 07</title>
+	</head>
+<script type="text/javascript">
+<!--
+
+var MemberInfo = { "홍길동" : 0 };
+
+// * registerMember("홍길동") 과 같은 형태로 새 멤버를 등록할 수 있습니다.
+function registerMember(name) {
+	var existMember = MemberInfo[name];
+
+	if (existMember >= 0) {
+		console.log("이미 등록된 이름입니다. : " + name);
+		return 0;
+	}
+	else {
+		MemberInfo[name] = 0;
+		return 1;
+	}
+}
+
+// * checkAttendance("홍길동") 과 같이 호출하면 출석 횟수가 1회 증가합니다.
+function checkAttendance(name) {
+	var curCount = MemberInfo[name];
+
+	if (curCount >= 0) {
+		MemberInfo[name] = curCount + 1;
+		return 1;
+	}
+	else {
+		console.log("출석부에 등록되지 않은 이름입니다. : " + name);
+		return 0;
+	}
+}
+
+// * quitMember("홍길동") 과 같이 호출하면 멤버가 탈퇴됩니다.
+function quitMember(name) {
+	var existMember = MemberInfo[name];
+
+	if (existMember >= 0) {
+		delete MemberInfo[name];
+		return 1;
+	}
+	else {
+		console.log("출석부에 등록되지 않은 이름입니다. : " + name);
+		return 0;
+	}
+}
+
+// * printAttendStatus() 하면 모든 멤버 목록과 출석 횟수가 콘솔에 출력됩니다.
+function printAttendStatus() {
+	for (var name in MemberInfo) {
+		var attendCount = MemberInfo[name];
+		console.log(name + " : " + attendCount);
+	}
+	return 0;
+}
+//-->
+</script>	
+</html>
